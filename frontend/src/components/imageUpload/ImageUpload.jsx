@@ -28,6 +28,9 @@ const ImageUpload = () => {
                 },
             });
             dispatch(addImage(response.data.image));
+            setTitle('');
+            setDescription('');
+            setFile(null);
             // Redirect or handle successful upload
         } catch (error) {
             if (error.status = 403) {
